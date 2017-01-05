@@ -24,7 +24,7 @@
       'npm:': 'https://unpkg.com/',
       //'root:': '../',
       'git:':'https://kotarov.github.io/systemjs/',
-      'scripts:': '../lib/'
+      //'scripts:': '../lib/'
     },
      map: { 
        //app: 'git:', 
@@ -44,7 +44,7 @@
         
         'rxjs'                             : 'npm:rxjs@5.0.2',
         //'settings'                         : 'root:settings',
-        'lib'                              : 'scripts:lib',
+        'lib'                              : 'git:lib',
         
         'ts'                               : 'npm:plugin-typescript@5.3.1/lib/plugin.js',
         'typescript'                       : 'npm:typescript@2.1.4/lib/typescript.js'

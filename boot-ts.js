@@ -27,8 +27,8 @@
       'scripts:': '../lib/'
     },
      map: { 
-       app: 'git:', 
-       //app: './app',
+       //app: 'git:', 
+       app: './app',
         '@angular/core'                    : 'npm:@angular/core@2.4.1/bundles/core.umd.min.js',
         '@angular/common'                  : 'npm:@angular/common@2.4.1/bundles/common.umd.min.js',
         '@angular/compiler'                : 'npm:@angular/compiler@2.4.1/bundles/compiler.umd.min.js',

@@ -22,10 +22,13 @@
     },
     paths: { 
       'npm:': 'https://unpkg.com/',
-      'root:': '../',
+      //'root:': '../',
+      'git:':'https://kotarov.github.io/systemjs/',
       'scripts:': '../lib/'
     },
-     map: { app: './app',
+     map: { 
+       app: 'git:', 
+       //app: './app',
         '@angular/core'                    : 'npm:@angular/core@2.4.1/bundles/core.umd.min.js',
         '@angular/common'                  : 'npm:@angular/common@2.4.1/bundles/common.umd.min.js',
         '@angular/compiler'                : 'npm:@angular/compiler@2.4.1/bundles/compiler.umd.min.js',
@@ -40,7 +43,7 @@
         //'@angular/flex-layout'            : 'npm:@angular/flex-layout@2.0.0-beta.1/bundles/flex-layout.umd.js',
         
         'rxjs'                             : 'npm:rxjs@5.0.2',
-        'settings'                         : 'root:settings',
+        //'settings'                         : 'root:settings',
         'lib'                              : 'scripts:lib',
         
         'ts'                               : 'npm:plugin-typescript@5.3.1/lib/plugin.js',

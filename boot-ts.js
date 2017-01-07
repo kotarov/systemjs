@@ -60,7 +60,7 @@
     
     packages: {
       app: { main: 'app', defaultExtension: 'ts' },
-      rxjs: { defaultExtension: 'js' }
+      rxjs: { defaultExtension: 'ts' }
     }
   });
   

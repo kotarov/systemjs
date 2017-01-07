@@ -1,7 +1,7 @@
 (function (global) {
   System.config({
     
-    transpiler: 'ts',
+    transpiler: 'js',
     typescriptOptions: {
       "target": "es5",
       "module": "commonjs",
@@ -17,7 +17,7 @@
     },
     meta: {
       'typescript': {
-        "exports": "ts"
+        "exports": "js"
       }
     },
     paths: { 
@@ -59,7 +59,7 @@
     },
     
     packages: {
-      app: { main: 'app', defaultExtension: 'ts' },
+      app: { main: 'app', defaultExtension: 'js' },
       rxjs: { defaultExtension: 'js' }
     }
   });

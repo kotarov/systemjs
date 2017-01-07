@@ -1,8 +1,25 @@
 (function (global) {
   System.config({
     
-    transpiler: 'js',
-    
+    transpiler: 'ts',
+    typescriptOptions: {
+      "target": "es5",
+      "module": "commonjs",
+      "moduleResolution": "node",
+      "sourceMap": true,
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      "removeComments": false,
+      "noImplicitAny": true,
+      "suppressImplicitAnyIndexErrors": true,
+      //"typeRoots": [ "node_modules/@types/" ],
+      //"types": ["hammerjs"]
+    },
+    meta: {
+      'typescript': {
+        "exports": "ts"
+      }
+    },
     paths: { 
       'npm:': 'https://unpkg.com/',
       //'root:': '../',
@@ -30,11 +47,19 @@
         //'settings'                         : 'root:settings',
         'lib'                              : 'local:lib',
         
+        'ts'                               : 'npm:plugin-typescript@5.3.1/lib/plugin.js',
+        'typescript'                       : 'npm:typescript@2.1.4/lib/typescript.js'
+        
+        
         //'@angular/hummer': 'unpkg:@angular/hummer/hummer.umd.js',
+        //'ts'                               : 'npm:plugin-typescript@5.3.1/lib/plugin.js',
+        //'typescript'                       : 'npm:typescript@2.1.4/lib/typescript.js'
+        //'ts': 'npm:plugin-typescript@4.0.10/lib/plugin.js',
+        //'typescript': 'npm:typescript@2.0.3/lib/typescript.js'
     },
     
     packages: {
-      app: { main: 'app', defaultExtension: 'js' },
+      app: { main: 'app', defaultExtension: 'ts' },
       rxjs: { defaultExtension: 'js' }
     }
   });

@@ -1,0 +1,49 @@
+<md-sidenav-layout>
+
+        <md-toolbar color="primary" class="no-print small">
+            <button md-icon-button (click)="leftsidenav.toggle()"> 
+                <md-icon style="fill:#fff">menu</md-icon> 
+            </button>
+            <div style="width:1em"></div>
+            <div>{{ name }}</div>
+            
+            <div fxFlex> </div>
+
+            <span *ngFor="let group of Config.Navigation">
+                <span *ngFor="let item of group.children">
+                    <button md-button
+                        *ngIf="item.quick"
+                        routerLink="/{{ item.path }}"
+                        title="{{ item.desc }}"
+                    >{{ item.title }}</button>
+                </span>
+            </span>
+            <!--<button md-icon-button><md-icon>power_settings_new</md-icon></button> -->
+        </md-toolbar>
+        
+
+        <md-sidenav #leftsidenav>
+            <md-toolbar class="small" style="background: transparent">
+                    <button md-icon-button (click)="leftsidenav.toggle()"> 
+                        <md-icon style="fill:#000">chevron_left</md-icon> 
+                    </button> &nbsp;&nbsp;&nbsp;
+                    <div style="min-width:200px"><img src="app/img/logo.png" style="max-height: 40px"></div>
+            </md-toolbar>
+            
+            <div *ngFor="let group of Config.Navigation">
+                <h3 style="background: #f0f0f0; padding: 10px; margin-bottom:0"> &nbsp;&nbsp; {{ group.title }} </h3>
+                <button  md-button  (click)="leftsidenav.toggle()"
+                    *ngFor="let item of group.children"
+                        routerLink="{{ item.path }}"
+                        style="width:100%; text-align:left"
+                        title="{{ item.desc }}"
+                >{{ item.title }}</button>
+            </div>
+        </md-sidenav>
+                
+        
+        <div style="padding:1em; min-height:calc(100vh - 45px - 2em);">
+            <router-outlet></router-outlet>
+        </div>
+
+</md-sidenav-layout>

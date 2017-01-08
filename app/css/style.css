@@ -1,0 +1,40 @@
+body { 
+	font-weight: normal;
+	font-size:	13px;
+	letter-spacing: 0px;
+	font-family: Roboto, "Helvetica Neue", Helvetica, sans-serif; 
+	margin:0; 
+	padding:0;
+	background: #fafafa;
+}
+
+
+@media print{
+  .no-print { display: none !important; } 
+  .anly-print{ display:block;}
+}
+@media screen{
+  /*bugs*/
+  input[type=date] { margin:-2px 0 -3px; }
+  svg { fill: inherit }
+  .md-select-content { background: #fff; }
+  .cdk-visually-hidden{display:none}
+  
+  /*new*/
+  .only-print { display:none; }
+  
+  md-icon.prefix, md-icon.suffix { font-size: 1.3em; position: relative; top:0.3em }
+  md-icon.prefix svg, md-icon.suffix svg { position:relative; top:0.2em; width: 1em;}
+  
+  .md-input-placeholder.md-float:not(.md-empty), .md-input-placeholder.md-float.md-focused
+      { padding-bottom:0px!important; }
+  
+  md-toolbar.small { min-height: 45px!important }
+  md-toolbar.small md-toolbar-row { height: 45px!important}
+  md-toolbar.container { background: transparent; font-size:1em;}
+  md-toolbar span.container { font-size: 0.7em }
+
+  /*theme*/
+  md-toolbar[color=primary]{background:#303f9f;color:#fff;font-weight:300;font-size:1.4rem;}
+  
+}

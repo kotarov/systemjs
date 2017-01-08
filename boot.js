@@ -1,25 +1,5 @@
 (function (global) {
   System.config({
-    
-    transpiler: 'js',
-    typescriptOptions: {
-      "target": "es5",
-      "module": "commonjs",
-      "moduleResolution": "node",
-      "sourceMap": true,
-      "emitDecoratorMetadata": true,
-      "experimentalDecorators": true,
-      "removeComments": false,
-      "noImplicitAny": true,
-      "suppressImplicitAnyIndexErrors": true,
-      //"typeRoots": [ "node_modules/@types/" ],
-      //"types": ["hammerjs"]
-    },
-    meta: {
-      'typescript': {
-        "exports": "js"
-      }
-    },
     paths: { 
       'npm:': 'https://unpkg.com/',
       //'root:': '../',
@@ -59,7 +39,7 @@
     },
     
     packages: {
-      app: { main: 'app', defaultExtension: 'js' },
+      app: { main: 'app.js', defaultExtension: 'js' },
       rxjs: { defaultExtension: 'js' }
     }
   });

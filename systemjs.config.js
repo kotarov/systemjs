@@ -31,8 +31,8 @@
       'angular-in-memory-web-api': 'npm:angular-in-memory-web-api/bundles/in-memory-web-api.umd.js',
 	  
       // system libraries
-      'system/404':                 'spm:system_modules/404/404.js',
-      'system/login':               'spm:system_modules/login/login.js'
+      '@system/404':                 'spm:system_modules/404/404.js',
+      '@system/login':               'spm:system_modules/login/login.js'
     },
     // packages tells the System loader how to load when no filename and/or no extension
     packages: {

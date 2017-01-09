@@ -16,6 +16,7 @@ var NotInstalledComponent = (function () {
     NotInstalledComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
+            styleUrls: ['not-installed.css'],
             templateUrl: 'not-installed.html'
         }), 
         __metadata('design:paramtypes', [])

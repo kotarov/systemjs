@@ -12,11 +12,9 @@ var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var material_1 = require('@angular/material');
 var router_1 = require('@angular/router');
-var flex_layout_1 = require("@angular/flex-layout");
+var flex_layout_1 = require('@angular/flex-layout');
+var not_found_1 = require('@system/not-found');
 var app_component_1 = require('./app.component');
-var _404_1 = require('system/404');
-//import { NotInstalledComponent, NotInstalledModule } from 'system/not-installed';
-//import { LoginComponent, LoginModule } from 'system/login';
 var AppConfig = require('./app.config.js');
 var AppModule = (function () {
     function AppModule(mdIconRegistry) {
@@ -32,9 +30,9 @@ var AppModule = (function () {
                     //{path:'Login', loadChildren: 'lib/login/login.ts#LoginModule'},
                     //{ path: 'Login', component: LoginComponent },
                     //{ path: 'login', component: LoginComponent },
-                    { path: '**', component: _404_1.PageNotFoundComponent }
+                    { path: '**', component: not_found_1.NotFoundComponent }
                 ]), { useHash: true }),
-                _404_1.PageNotFoundModule
+                not_found_1.NotFoundModule
             ],
             declarations: [app_component_1.AppComponent],
             bootstrap: [app_component_1.AppComponent]
